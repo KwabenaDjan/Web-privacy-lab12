@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!-- Lab 12 bright-pattern page: redesign of https://sandra.webprivacylab.com/darkpatterns (see Lab12_Report.ipynb). Host at /brightpatterns/ on your site. -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Privacy Course — Clear choices</title>
+    <title>Web Privacy Course</title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -90,7 +89,7 @@
         }
         legend { font-weight: 600; padding: 0 6px; }
         label { display: block; margin: 8px 0; cursor: pointer; }
-        .activity-demo {
+        .foot {
             font-size: 0.8rem;
             color: #64748b;
             margin-top: 24px;
@@ -104,101 +103,100 @@
 
 <header>
     <h1>Web Privacy Course</h1>
-    <p>Learn to protect yourself online. Enrollment is open on a regular schedule—no artificial deadlines.</p>
+    <p>Web privacy basics. Dates and registration are on Albert.</p>
 </header>
 
 <main>
     <div class="card">
-        <h2>Course overview</h2>
-        <p>Explore web privacy fundamentals: tracking technologies, consent design, dark patterns, and practical defenses. This course is for anyone who wants a clearer picture of how the web handles personal data.</p>
-        <button type="button" onclick="alert('See the syllabus on Albert for dates and readings.')">View syllabus (Albert)</button>
+        <h2>Overview</h2>
+        <p>Tracking, consent, dark patterns, and defenses.</p>
+        <button type="button" onclick="alert('Syllabus on Albert.')">Syllabus (Albert)</button>
     </div>
 
     <div class="card">
-        <h2>Lecture slides mailing list</h2>
+        <h2>Slide mailing list</h2>
         <div class="highlight">
-            <p><strong>Optional:</strong> Get email when new lecture slides are posted. You can unsubscribe anytime from the footer of any message.</p>
-            <form onsubmit="event.preventDefault(); alert('Thanks — in a real site this would only subscribe you to slides, with a confirmation email.');">
+            <p>Email when new slides post. Unsubscribe from any message if you want out.</p>
+            <form onsubmit="event.preventDefault(); alert('Demo only — no server.');">
                 <label>
                     <input type="checkbox" name="partners" value="1">
-                    Also send me occasional invitations to <em>optional</em> partner academic events (not required for the course).
+                    Include invites to optional partner events
                 </label>
                 <label>
-                    Email
-                    <input type="email" name="email" required autocomplete="email" style="margin-left:8px; min-width:220px;">
+                    Email <input type="email" name="email" required autocomplete="email" style="margin-left:8px; min-width:220px;">
                 </label>
-                <p class="fine-print">There is <strong>no</strong> paid “premium materials” trial tied to this mailing list. If we ever offered add-on materials, pricing and billing would be shown on its own screen before you paid—not buried here.</p>
+                <p class="fine-print">Signing up here is only for slide mail. No paid trial or auto-billing on this form.</p>
                 <div class="btn-row">
-                    <button type="submit">Subscribe to slide updates</button>
+                    <button type="submit">Sign up</button>
                 </div>
             </form>
         </div>
     </div>
 
     <div class="card">
-        <h2>What students say</h2>
+        <h2>Comments from students</h2>
         <p>“This course made me rethink how I browse!” — Alex T.</p>
-        <p>“Super practical, easy to follow, and critical today.” — Jamie R.</p>
+        <p>“Practical and easy to follow.” — Jamie R.</p>
     </div>
 
     <div class="card">
-        <h2>Webinar: first session</h2>
+        <h2>Webinar (first session)</h2>
         <div class="highlight">
-            <p>We run this webinar on a fixed schedule. Capacity is managed fairly; we do not use fake “only X seats left” counters.</p>
+            <p>Regular schedule. No “only N seats left” line.</p>
             <div class="btn-row">
-                <button type="button" onclick="alert('You would be registered for the next session.')">Register for webinar</button>
-                <button type="button" class="outline" onclick="alert('No problem — you can register later from Albert.')">Not now</button>
+                <button type="button" onclick="alert('Demo: registered.')">Register</button>
+                <button type="button" class="outline" onclick="alert('Demo: skipped.')">Not now</button>
             </div>
         </div>
     </div>
 
     <div class="card">
-        <h2>Optional learning challenges</h2>
-        <p>We sometimes run extra practice challenges. They are optional and do not affect your grade unless explicitly stated in the syllabus.</p>
+        <h2>Optional challenges</h2>
+        <p>Extra practice only. Not required unless the syllabus says so.</p>
         <div class="btn-row">
-            <button type="button" onclick="alert('You are signed up for optional challenges.')">Yes, include me in optional challenges</button>
-            <button type="button" class="secondary" onclick="alert('You will not be enrolled in optional challenges.')">No thanks</button>
+            <button type="button" onclick="alert('Demo: opted in.')">Yes, sign me up</button>
+            <button type="button" class="secondary" onclick="alert('Demo: opted out.')">No</button>
         </div>
     </div>
 
     <div class="card">
-        <h2>Communication preferences</h2>
-        <p>Choose what we may send you. Nothing is pre-selected except what is strictly necessary for course operation (e.g., grades and official notices through NYU systems—not controlled on this demo page).</p>
-        <form onsubmit="event.preventDefault(); alert('Preferences saved (demo).');">
+        <h2>Email preferences (demo)</h2>
+        <p>Optional boxes start unchecked. Official course email is separate (Albert / instructor).</p>
+        <form onsubmit="event.preventDefault(); alert('Demo: saved.');">
             <fieldset>
-                <legend>Email from this course site (demo)</legend>
-                <label><input type="checkbox" name="necessary" checked disabled> Essential course emails (cannot opt out of official course communication through Albert/email the instructor uses)</label>
-                <label><input type="checkbox" name="partners"> Share anonymized participation statistics with academic partners (aggregated only)</label>
-                <label><input type="checkbox" name="promo"> Occasional promotional emails about related workshops</label>
+                <legend>This site only</legend>
+                <label><input type="checkbox" name="necessary" checked disabled> Required notices (placeholder — real ones go through Albert)</label>
+                <label><input type="checkbox" name="partners"> Aggregated stats shared with partners</label>
+                <label><input type="checkbox" name="promo"> Workshop promos</label>
             </fieldset>
             <div class="btn-row">
-                <button type="submit">Save my choices</button>
+                <button type="submit">Save</button>
             </div>
         </form>
     </div>
 
     <div class="card">
-        <h2>Premium add-on (example)</h2>
-        <p>If you had signed up for an optional paid add-on, you could cancel it here without a multi-step maze.</p>
-        <button type="button" onclick="document.getElementById('cancel-panel').classList.toggle('hidden')">Manage or cancel add-on</button>
+        <h2>Cancel add-on (demo)</h2>
+        <p>Optional paid add-on: cancel in one place.</p>
+        <button type="button" onclick="document.getElementById('cancel-panel').classList.toggle('hidden')">Cancel or manage</button>
         <div id="cancel-panel" class="hidden highlight" style="margin-top:12px;">
-            <p><strong>Cancel add-on:</strong> One step. You can also email the course staff; we respond during normal business hours and list those hours in the syllabus.</p>
+            <p>Pick a reason if you want, then confirm.</p>
             <label>
                 Reason (optional)
                 <select>
-                    <option>Content not useful</option>
-                    <option>Found a better option</option>
-                    <option>Other / prefer not to say</option>
+                    <option>Not useful</option>
+                    <option>Other course</option>
+                    <option>Prefer not to say</option>
                 </select>
             </label>
             <div class="btn-row">
-                <button type="button" class="secondary" onclick="alert('Add-on canceled (demo). You would receive email confirmation.')">Confirm cancellation</button>
+                <button type="button" class="secondary" onclick="alert('Demo: canceled.')">Confirm</button>
             </div>
         </div>
     </div>
 </main>
 
-<p class="activity-demo">Demo note: live “someone just enrolled” tickers are omitted here—they are often used as pressure tactics and are not shown on this bright-pattern page.</p>
+<p class="foot">No live “someone just signed up” bar on this page.</p>
 
 </body>
 </html>
