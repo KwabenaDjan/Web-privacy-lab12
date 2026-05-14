@@ -1,0 +1,70 @@
+Lab 12 — Deploy the bright page (read once, then follow A or B)
+================================================================
+
+Your live URL must look like:
+  https://<something>/brightpatterns/
+  (and open the page — you should see “Web Privacy Course — Clear choices”)
+
+This folder `lab12-pages-deploy` is already a git repo with one commit.
+It only contains the bright page (no API keys, no course notebooks).
+
+
+OPTION A — GitHub Pages (recommended)
+---------------------------------------
+
+1) On GitHub: New repository
+   - Name example: web-privacy-lab12
+   - Public
+   - Do NOT add README / .gitignore / license (this folder already has content).
+
+2) In Terminal (replace YOUR_USER and YOUR_REPO):
+
+   cd "/Users/sekyidk/Downloads/Web privacy lab 6/lab12-pages-deploy"
+   git remote add origin https://github.com/YOUR_USER/YOUR_REPO.git
+   git push -u origin main
+
+   If GitHub asks for login, use a Personal Access Token as the password
+   (GitHub → Settings → Developer settings → Personal access tokens),
+   or use SSH:
+   git remote add origin git@github.com:YOUR_USER/YOUR_REPO.git
+
+3) On GitHub: Settings → Pages
+   - Build and deployment → Source: “Deploy from a branch”
+   - Branch: main, folder: / (root)
+   - Save
+
+4) Wait ~1 minute, refresh Pages until it shows a green check and a URL.
+
+5) Your lab URL is:
+   https://YOUR_USER.github.io/YOUR_REPO/brightpatterns/
+
+   Paste that URL into the first cell of Lab12_Report.ipynb.
+
+
+OPTION B — Netlify Drop (no git required)
+-----------------------------------------
+
+1) In Finder, compress the folder `lab12-pages-deploy` into a ZIP
+   (important: the ZIP should contain `brightpatterns` at the top level,
+   not a duplicate parent folder — Netlify should see `brightpatterns/index.html`).
+
+2) Open https://app.netlify.com/drop and drag the ZIP (or the folder).
+
+3) Netlify gives you a URL like https://random-name.netlify.app/
+   Your bright page is at:
+   https://random-name.netlify.app/brightpatterns/
+
+4) Paste that full `/brightpatterns/` URL into Lab12_Report.ipynb.
+
+
+Updating the page later
+-----------------------
+
+Edit `brightpatterns/index.html` in this deploy folder (or copy from your main lab folder), then:
+
+   cd "/Users/sekyidk/Downloads/Web privacy lab 6/lab12-pages-deploy"
+   git add brightpatterns/index.html
+   git commit -m "Update bright page"
+   git push
+
+Netlify: drag a new ZIP or use the Netlify UI “Deploys” workflow.
